@@ -1,4 +1,5 @@
 import boxes.DoubleBox;
+import boxes.MultiBox;
 
 public class Main {
 
@@ -27,6 +28,20 @@ public class Main {
         System.out.println("111 -> " + box.get(22)); // Second string
         System.out.println("111 -> " + box.get(3333)); // null
         System.out.println("SIZE: " + box.size()); // 2
+
+        MultiBox<String> multiBox = new MultiBox<>();
+        System.out.println("PUT: " + multiBox.put(111, "First"));
+        System.out.println("PUT: " + multiBox.put(222, "Second"));
+        System.out.println("PUT: " + multiBox.put(333, "Third"));
+        System.out.println("PUT: " + multiBox.put(444, "Fourth"));
+        System.out.println("111 -> " + multiBox.get(111));
+        System.out.println("111 -> " + multiBox.get(222));
+        System.out.println("111 -> " + multiBox.get(333));
+        System.out.println("111 -> " + multiBox.get(444));
+        System.out.println("SIZE: " + multiBox.size()); // 2
+
+
+
     }
 }
 
